@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kafka Topic Sample Data</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="mt-5">Kafka Topic Sample Data</h1>
+
+        <!-- Formulário de Filtros -->
+        <form id="filter-form" class="form-inline mt-3">
+            <div class="form-group">
+                <label for="topic" class="mr-2">Topic:</label>
+                <input type="text" id="topic" name="topic" class="form-control mr-3" placeholder="sample_data">
+            </div>
+            <div class="form-group">
+                <label for="partition" class="mr-2">Partition:</label>
+                <input type="number" id="partition" name="partition" class="form-control mr-3" placeholder="Any">
+            </div>
+            <div class="form-group">
+                <label for="max_results" class="mr-2">Max Results:</label>
+                <input type="number" id="max_results" name="max_results" class="form-control mr-3" value="50">
+            </div>
+            <button type="submit" class="btn btn-primary">Apply Filters</button>
+        </form>
+
+        <table class="table table-striped mt-3">
+            <thead>
+                <tr>
+                    <th>Timestamp</th>
+                    <th>Offset</th>
+                    <th>Partition</th>
+                    <th>Key</th>
+                    <th>Value</th>
+                </tr>
+            </thead>
+            <tbody id="data-table">
+                <!-- Data will be inserted here -->
+            </tbody>
+        </table>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+</body>
+</html>
